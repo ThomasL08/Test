@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Trailtrekker</string>
+    <string name="username_hint">username</string>
+    <string name="password_hint">password</string>
+    <string name="signup">signup</string>
+    <string name="login_in">Login</string>
+    <string name="login">Login</string>
+</resources>
