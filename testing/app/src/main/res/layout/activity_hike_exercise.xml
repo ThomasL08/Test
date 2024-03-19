@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="20dp"
+            android:background="@drawable/background"
+            android:scaleType="centerCrop">
+
+            <androidx.gridlayout.widget.GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:columnCount="3"
+                app:rowCount="1"
+                android:layout_weight="1"
+                android:paddingTop="10dp"
+                android:layout_marginBottom="7dp">
+
+                <Button
+                    android:id="@+id/backButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="10dp"
+                    android:backgroundTint="@color/dark_beige"
+                    android:gravity="center"
+                    android:onClick="onClickBack"
+                    android:text="Back"
+                    android:textColor="@color/black"
+                    android:visibility="visible"
+                    app:layout_column="0"
+                    app:layout_gravity="fill"
+                    app:layout_row="0" />
+
+                <TextView
+                    android:id="@+id/titleTV"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="left|center"
+                    android:text="[Activity Title]"
+                    app:layout_columnWeight="3"
+                    app:layout_gravity="fill"
+                    android:textColor="@color/beige"/>
+            </androidx.gridlayout.widget.GridLayout>
+
+            <fragment
+                android:id="@+id/map_fragment"
+                android:name="com.google.android.gms.maps.MapFragment"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="7" />
+
+            <androidx.gridlayout.widget.GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:columnCount="3"
+                app:rowCount="1"
+                android:layout_weight="1"
+                android:background="@color/beige"
+                android:layout_marginTop="10dp"
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp">
+
+                <Button
+                    android:id="@+id/startButton"
+                    android:onClick="onClickStart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:gravity="center"
+                    android:text="Start"
+                    android:visibility="visible"
+                    app:layout_gravity="fill"
+                    android:textColor="@color/beige"
+                    android:backgroundTint="@color/green" />
+
+                <Button
+                    android:id="@+id/stopButton"
+                    android:onClick="onClickStop"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:gravity="center"
+                    android:text="Stop"
+                    android:visibility="gone"
+                    app:layout_gravity="fill"
+                    android:backgroundTint="@color/orange"/>
+
+
+                <TextView
+                    android:id="@+id/durationTV"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="left|center"
+                    android:text="0:00:00"
+                    app:layout_gravity="fill"
+                    android:textSize="26dp"
+                    android:textColor="@color/black"/>
+            </androidx.gridlayout.widget.GridLayout>
+
+
+            <androidx.gridlayout.widget.GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:columnCount="3"
+                app:rowCount="1"
+                android:layout_weight="2"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="10dp"
+                android:background="@color/beige">
+
+                <TextView
+                    android:id="@+id/calTV"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@color/dark_beige"
+                    android:gravity="center"
+                    android:text="Calories"
+                    app:layout_columnWeight="1"
+                    app:layout_gravity="fill"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:id="@+id/disTV"
+                    android:text="Distance"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:gravity="center"
+                    app:layout_columnWeight="1"
+                    app:layout_gravity="fill"
+                    android:layout_marginRight="10dp"
+                    android:background="@color/dark_beige"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:id="@+id/stepTV"
+                    android:text="Step Count"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:gravity="center"
+                    app:layout_columnWeight="1"
+                    app:layout_gravity="fill"
+                    android:background="@color/dark_beige"
+                    android:textColor="@color/black"/>
+
+            </androidx.gridlayout.widget.GridLayout>
+            <androidx.gridlayout.widget.GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:columnCount="3"
+                app:rowCount="1"
+                android:layout_weight="1"
+                android:padding="10dp"
+                android:background="@color/beige">
+
+                <TextView
+                    android:id="@+id/gCalTV"
+                    android:text="Calories goal"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    app:layout_columnWeight="1"
+                    app:layout_gravity="fill"
+                    android:layout_marginRight="10dp"
+                    android:background="@color/dark_beige"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:id="@+id/gDisTV"
+                    android:text="Distance Goal"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    app:layout_columnWeight="1"
+                    app:layout_gravity="fill"
+                    android:layout_marginRight="10dp"
+                    android:background="@color/dark_beige"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:id="@+id/gStepTV"
+                    android:text="Step Count Goal"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    app:layout_columnWeight="1"
+                    app:layout_gravity="fill"
+                    android:background="@color/dark_beige"
+                    android:textColor="@color/black"/>
+
+            </androidx.gridlayout.widget.GridLayout>
+
+
+        </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
