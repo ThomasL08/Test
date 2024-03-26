@@ -287,7 +287,7 @@ public class HikeExerciseActivity extends AppCompatActivity implements OnMapRead
     public void onMapReady(GoogleMap map) {
         myMap = map;
 
-        // Check and request location permissions
+        // Check for location permission
         if (checkLocationPermission()) {
             // Permission granted, proceed with accessing location
             fusedLocationClient.getLastLocation()
@@ -305,7 +305,6 @@ public class HikeExerciseActivity extends AppCompatActivity implements OnMapRead
                         }
                     });
 
-            // Enable "My Location" feature
             myMap.setMyLocationEnabled(true);
             myMap.setOnMyLocationButtonClickListener(this);
             myMap.setOnMyLocationClickListener(this);
