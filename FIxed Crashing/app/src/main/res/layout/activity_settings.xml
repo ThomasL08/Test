@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:background="@drawable/background"
+        android:scaleType="centerCrop">
+
+        <androidx.gridlayout.widget.GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            app:columnCount="3"
+            app:rowCount="1"
+            android:paddingTop="10dp"
+            android:layout_marginBottom="30dp">
+
+            <Button
+                android:id="@+id/backButton"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginRight="10dp"
+                android:backgroundTint="@color/dark_beige"
+                android:gravity="center"
+                android:onClick="onClickBack"
+                android:text="Back"
+                android:textColor="@color/black"
+                android:visibility="visible"
+                app:layout_column="0"
+                app:layout_gravity="fill"
+                app:layout_row="0" />
+
+            <TextView
+                android:id="@+id/titleTV"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="left|center"
+                android:text="Settings"
+                app:layout_columnWeight="3"
+                app:layout_gravity="fill"
+                android:textColor="@color/beige"/>
+
+        </androidx.gridlayout.widget.GridLayout>
+
+
+        <TextView
+            android:id="@+id/usernameTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Username:"
+            android:textColor="@color/beige"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="20dp"/>
+
+        <EditText
+            android:id="@+id/usernameEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:text="Username"
+            android:padding="15dp"
+            android:background="@color/dark_beige"
+            android:gravity="left|center"
+            app:layout_columnWeight="1"
+            app:layout_gravity="fill"
+            android:textColor="@color/black"
+            android:inputType="text"
+            android:layout_marginBottom="10dp"/>
+        <TextView
+            android:id="@+id/passwordTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Password:"
+            android:textColor="@color/beige"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="20dp"/>
+
+        <EditText
+            android:id="@+id/passwordEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:background="@color/dark_beige"
+            android:ems="10"
+            android:gravity="left|center"
+            android:inputType="text"
+            android:padding="15dp"
+            android:text="Password"
+            android:textColor="@color/black"
+            app:layout_columnWeight="1"
+            app:layout_gravity="fill" />
+
+        <TextView
+            android:id="@+id/weightTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Weight:"
+            android:textColor="@color/beige"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="20dp"/>
+
+        <EditText
+            android:id="@+id/weightEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:text="Weight"
+            android:padding="15dp"
+            android:background="@color/dark_beige"
+            android:gravity="left|center"
+            app:layout_columnWeight="1"
+            app:layout_gravity="fill"
+            android:textColor="@color/black"
+            android:inputType="text"
+            android:layout_marginBottom="10dp"/>
+
+        <TextView
+            android:id="@+id/heightTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Username:"
+            android:textColor="@color/beige"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="20dp"/>
+
+        <EditText
+            android:id="@+id/heightEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:text="Height"
+            android:padding="15dp"
+            android:background="@color/dark_beige"
+            android:gravity="left|center"
+            app:layout_columnWeight="1"
+            app:layout_gravity="fill"
+            android:textColor="@color/black"
+            android:inputType="text"
+            android:layout_marginBottom="30dp"/>
+
+        <Button
+            android:id="@+id/button5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:backgroundTint="@color/green"
+            android:onClick="onClick"
+            android:text="Save" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
