@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="beige">#F9FFED</color>
+    <color name="green">#59751C</color>
+    <color name="dark_green">#182B29</color>
+    <color name="orange">#FF8125</color>
+    <color name="dark_beige">#D0DFC4</color>
+    <color name="tan">#CDCBB8</color>
+
+
+</resources>
