@@ -10,8 +10,10 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class SplashScreen extends AppCompatActivity {
 
-    private static final int SPLASH_DELAY = 5000; // 5 seconds
+    private static final int SPLASH_DELAY = 3000; // 3 seconds
     private SharedPreferences sharedPreferences;
+
+    private boolean isFirstTime;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -22,7 +24,7 @@ public class SplashScreen extends AppCompatActivity {
         sharedPreferences = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE);
 
         // Check if the user has previously registered
-        boolean isFirstTime = sharedPreferences.getBoolean("isFirstTime", true);
+        isFirstTime = sharedPreferences.getBoolean("isFirstTime", true);
 
         // Delay for 5 seconds and then redirect to appropriate activity
         new Handler().postDelayed(new Runnable() {
@@ -42,4 +44,3 @@ public class SplashScreen extends AppCompatActivity {
         }, SPLASH_DELAY);
     }
 }
-

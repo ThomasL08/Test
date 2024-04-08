@@ -15,7 +15,7 @@ public class RegisterActivity extends AppCompatActivity {
 
     private SharedPreferences sharedPreferences;
     private EditText usernameEditText, passwordEditText;
-    private Button registerButton;
+    private Button registerButton, loginButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +26,7 @@ public class RegisterActivity extends AppCompatActivity {
         usernameEditText = findViewById(R.id.usernameEditText);
         passwordEditText = findViewById(R.id.passwordEditText);
         registerButton = findViewById(R.id.loginButton);
+        loginButton = findViewById(R.id.cancelButton);
 
         // Get shared preferences
         sharedPreferences = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE);
@@ -44,16 +45,29 @@ public class RegisterActivity extends AppCompatActivity {
                     SharedPreferences.Editor editor = sharedPreferences.edit();
                     editor.putString("username", enteredUsername);
                     editor.putString("password", enteredPassword);
+
+                    // Set firstTime boolean to false
+                    editor.putBoolean("isFirstTime", false);
+
                     editor.apply();
 
                     // Show success message
                     Toast.makeText(RegisterActivity.this, "Registration successful", Toast.LENGTH_SHORT).show();
+
 
                     // Redirect to login activity
                     Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);
                     startActivity(intent);
                     finish();
                 }
+            }
+        });
+
+        loginButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);
+                startActivity(intent);
             }
         });
     }

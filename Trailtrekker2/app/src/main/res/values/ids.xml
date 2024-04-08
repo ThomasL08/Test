@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="darkModeCheckBox" type="id" />
+    <item name="fontSizeRadioGroup" type="id" />
+    <item name="smallFontSizeRadioButton" type="id" />
+    <item name="mediumFontSizeRadioButton" type="id" />
+    <item name="largeFontSizeRadioButton" type="id" />
+</resources>

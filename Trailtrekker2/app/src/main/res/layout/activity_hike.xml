@@ -5,13 +5,29 @@
     android:layout_centerInParent="true"
     tools:context=".HikeActivity">
 
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/hike_bg" />
+
     <TextView
         android:id="@+id/questionTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="300dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
         android:text="Question"
         android:textSize="18sp"
-        android:layout_margin="16dp"/>
+        android:textColor="@color/dark_green"/>
 
     <EditText
         android:id="@+id/answerEditText"
@@ -22,36 +38,40 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="16dp"
         android:hint="Your answer"
-        android:inputType="text"/>
+        android:inputType="text"
+        android:textColor="@color/dark_green"
+        android:textColorHint="@color/lighter_green" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/answerEditText"
+        android:padding="20dp">
 
     <Button
         android:id="@+id/previousButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/answerEditText"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="16dp"
-        android:layout_marginStart="16dp"
         android:text="Previous"
-        android:onClick="onPreviousQuestionClick"/>
+        android:onClick="onPreviousQuestionClick"
+        android:layout_weight="1"
+        android:backgroundTint="@color/dark_beige"
+        android:textColor="@color/dark_green"
+        android:layout_marginRight="10dp"/>
 
     <Button
         android:id="@+id/nextButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/answerEditText"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
         android:text="Next"
-        android:onClick="onNextQuestionClick"/>
+        android:onClick="onNextQuestionClick"
+        android:layout_weight="1"
+        android:backgroundTint="@color/green"
+        android:textColor="@color/dark_beige"/>
 
-    <androidx.viewpager2.widget.ViewPager2
-        android:id="@+id/viewPager"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/nextButton"
-        android:layout_marginTop="16dp"/>
+    </LinearLayout>
 
 </RelativeLayout>
 
