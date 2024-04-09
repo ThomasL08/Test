@@ -10,6 +10,8 @@
     <color name="dark_beige">#D0DFC4</color>
     <color name="lighter_beige">#56D0DFC4</color>
     <color name="tan">#CDCBB8</color>
+    <color name="dark_primary">#163A10</color>
+    <color name="dark_accent">#378C29</color>
 
 
 </resources>

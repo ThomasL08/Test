@@ -55,6 +55,12 @@ public class HikeExerciseActivity extends AppCompatActivity implements OnMapRead
     private static final double SURREY_LAT = 49.189592;
     private static final double SURREY_LONG = -122.847834;
 
+    private static final double VANCOUVER_LAT = 49.24966000;
+    private static final double VANCOUVER_LONG = -123.11934000;
+
+    private static final double BURNABY_LAT = 49.246445;
+    private static final double BURNABY_LONG = -122.994560;
+
     //Buttons
     private Button backButton;
     private Button startButton;
@@ -451,16 +457,58 @@ public class HikeExerciseActivity extends AppCompatActivity implements OnMapRead
         }
         currentLocation = myLocationManger.getLastKnownLocation(LocationManager.GPS_PROVIDER);
         Location targetLocation = new Location("");
-        targetLocation.setLatitude(SURREY_LAT);
-        targetLocation.setLongitude(SURREY_LONG);
+        String currentCity = determineCurrentCity(currentLocation);
+        switch (currentCity) {
+            case "Surrey":
+                targetLocation.setLatitude(SURREY_LAT);
+                targetLocation.setLongitude(SURREY_LONG);
+                break;
+            case "Vancouer":
+                targetLocation.setLatitude(VANCOUVER_LAT);
+                targetLocation.setLongitude(VANCOUVER_LONG);
+                break;
+            case "Burnaby":
+                targetLocation.setLatitude(BURNABY_LAT);
+                targetLocation.setLongitude(BURNABY_LONG);
+
+        }
+//        targetLocation.setLatitude(SURREY_LAT);
+//        targetLocation.setLongitude(SURREY_LONG);
         float distance = currentLocation.distanceTo(targetLocation);
         float distThreshold = 5000;
         if (distance <= distThreshold) {
-            String url = "https://www.alltrails.com/canada/british-columbia/surrey";
+            String url = null;
+            switch (currentCity) {
+                case "Surrey":
+                    url = "https://www.alltrails.com/canada/british-columbia/surrey";
+                    break;
+                case "Vancouver":
+                    url = "https://www.alltrails.com/canada/british-columbia/vancouver";
+                    break;
+                case "Burnaby":
+                    url = "https://www.alltrails.com/canada/british-columbia/burnaby";
+                    break;
+            }
             Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
             startActivity(intent);
         } else {
             Toast.makeText(this, "No hiking spots nearby", Toast.LENGTH_SHORT).show();
+        }
+    }
+
+
+    private String determineCurrentCity(Location location) {
+        if (location.getLatitude() >= 49.1 && location.getLatitude() <= 49.3 &&
+                location.getLongitude() >= -123.2 && location.getLongitude() <= -122.9) {
+            return "Vancouver";
+        } else if (location.getLatitude() >= 49.1 && location.getLatitude() <= 49.3 &&
+                location.getLongitude() >= -122.9 && location.getLongitude() <= -122.6) {
+            return "Surrey";
+        } else if (location.getLatitude() >= 49.2 && location.getLatitude() <= 49.3 &&
+                location.getLongitude() >= -123.1 && location.getLongitude() <= -122.9) {
+            return "Burnaby";
+        } else {
+            return "Unknown";
         }
     }
 }

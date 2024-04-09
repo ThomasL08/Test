@@ -48,16 +48,16 @@
         android:layout_marginTop="8dp"
         android:textColorHint="@color/lighter_green"/>
 
-    <TextView
-        android:id="@+id/heightLabel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Height"
-        android:textColor="@color/dark_green"
-        android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/nameEditText"
-        android:layout_marginTop="24dp"/>
+        <TextView
+            android:id="@+id/heightLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Height (cm)"
+            android:textColor="@color/dark_green"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/nameEditText" />
 
     <EditText
         android:id="@+id/heightEditText"
@@ -74,16 +74,16 @@
         android:layout_marginTop="8dp"
         android:textColorHint="@color/lighter_green"/>
 
-    <TextView
-        android:id="@+id/weightLabel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Weight"
-        android:textColor="@color/dark_green"
-        android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/heightEditText"
-        android:layout_marginTop="24dp"/>
+        <TextView
+            android:id="@+id/weightLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Weight (kg)"
+            android:textColor="@color/dark_green"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/heightEditText" />
 
     <EditText
         android:id="@+id/weightEditText"

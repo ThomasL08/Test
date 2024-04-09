@@ -49,10 +49,11 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:gravity="left|center"
-                android:text="Settings"
+                android:onClick="openUIPreferences"
+                android:text="Preferences"
+                android:textColor="@color/beige"
                 app:layout_columnWeight="2"
-                app:layout_gravity="fill"
-                android:textColor="@color/beige"/>
+                app:layout_gravity="fill" />
 
         </androidx.gridlayout.widget.GridLayout>
 
@@ -110,11 +111,11 @@
             android:id="@+id/weightTV"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Weight:"
-            android:layout_marginBottom="10dp"
             android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            android:text="Weight (kg):"
             android:textColor="@color/dark_green"
-            android:textSize="18dp"/>
+            android:textSize="18dp" />
 
         <EditText
             android:id="@+id/weightEditText"
@@ -137,9 +138,9 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:layout_marginBottom="10dp"
-            android:text="Height:"
+            android:text="Height (cm):"
             android:textColor="@color/dark_green"
-            android:textSize="18dp"/>
+            android:textSize="18dp" />
 
         <EditText
             android:id="@+id/heightEditText"
