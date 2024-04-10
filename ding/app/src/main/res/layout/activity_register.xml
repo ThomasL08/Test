@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".RegisterActivity">
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/register" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="20dp">
+
+        <EditText
+            android:id="@+id/usernameEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:layout_marginTop="60dp"
+            android:autofillHints="username"
+            android:hint="@string/username_hint"
+            android:inputType="text"
+            android:minHeight="48dp"
+            android:textColorHint="@color/dark_beige"
+            android:textColor="@color/dark_beige"
+            android:backgroundTint="@color/dark_beige"/>
+
+        <EditText
+            android:id="@+id/passwordEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:autofillHints=""
+            android:hint="@string/password_hint"
+            android:inputType="textPassword"
+            android:minHeight="48dp"
+            android:textColorHint="@color/dark_beige"
+            android:textColor="@color/dark_beige"
+            android:backgroundTint="@color/dark_beige"/>
+
+        <androidx.gridlayout.widget.GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:columnCount="2"
+            app:rowCount="1">
+
+            <Button
+                android:id="@+id/cancelButton"
+                android:layout_height="wrap_content"
+                android:text="Login to Existing Account"
+                android:layout_marginRight="10dp"
+                app:layout_columnWeight="1"
+                android:backgroundTint="@color/dark_beige"
+                android:textColor="@color/dark_green"/>
+            <Button
+                android:id="@+id/loginButton"
+                android:layout_height="wrap_content"
+                android:text="@string/signup"
+                app:layout_columnWeight="1"
+                android:backgroundTint="@color/green"
+                android:textColor="@color/dark_beige"/>
+
+        </androidx.gridlayout.widget.GridLayout>
+
+
+        <TextView
+            android:id="@+id/errorMessageTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#FF0000" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
